@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='src/style.css')}}">
+</head>
+<body>
+    <div class="Login_reg_nav">
+      <a href="{{url_for('login_form')}}">
+        <h2>Clothing Store</h2>
+    </a> 
+    </div>
+
+    <div class="login" id="login">        
+        <h1 class="header">Login Form</h1>
+
+        <!-- action="success.html" -->
+        <form class="form" action="/login" method="post" >
+            <label for="email">Username</label><br>
+            <input type="text" id="email" name="username" required><br>
+            <label for="pass">Password</label><br>
+            <input type="password" id="pass" name="password" class="pass" required><br>
+            <a href="" class="forgot-password">Forgot Password</a>
+            
+            <input type="submit" value="LOGIN" class="btn"> <br>
+            <h3 class="error">{{error}}</h3>
+
+            <label  class="sign-up">Not a Member? 
+                <a href="{{url_for('register')}}">Signup Here</a>
+            </label>
+           
+        </form>
+    
+    </div>
+
+    
+</body>
+
+    <!-- <script>
+        let SubmitForm = () => {
+            let username = document.getElementById('email').value
+            let password = document.getElementById('pass').value
+
+            if (username === "admin" && password === "1234") {
+                window.open("index.html")
+            }
+            else{
+                alert("username or password is Invalid")
+            }
+        }
+    </script> -->
+
+</html>

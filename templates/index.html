@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Store</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='src/style.css')}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{url_for('index')}}">
+            <h2>Clothing Store</h2>
+        </a>  
+        <!-- <span class="logout">Logout</span> -->
+        <button class="logout" onclick="logout()">Logout</button>
+        <a href="{{url_for('cart')}}">
+            <div class="cart">
+                <i class="bi bi-cart4"></i>
+                <div id="cartamount" class="cartamount">0</div>
+            </div>
+        </a>           
+    </div>
+    <div class="shop" id="shop">
+        
+    </div>
+
+    <footer>
+        <p>Shoping cart &copy; 2023 Ram</p>
+      </footer>
+</body>
+<script src="{{url_for('static',filename='src/data.js')}}"></script>
+<script src="{{url_for('static',filename='src/main.js')}}"></script>
+</html>
